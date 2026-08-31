@@ -331,59 +331,78 @@ h3 {
   height: 54px;
   margin-bottom: 13px;
   place-items: center;
-  border-radius: 18px;
-  background: var(--surface-soft);
-  color: var(--accent-strong);
+  border-radius: 50%;
+  background: #277d7a;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(22, 61, 58, 0.14);
 }
 
 .value-illustration svg {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
 }
 
 .category-verbinding {
-  background: #eaf7fb;
-  color: #2f7696;
+  --icon-bg: #277d7a;
+  background: #277d7a;
+  color: #fff;
+  border-radius: 50%;
 }
 
 .category-autonomie {
-  background: #edf8f4;
-  color: #25806f;
+  --icon-bg: #eb7659;
+  background: #eb7659;
+  color: #fff;
+  border-radius: 50% 50% 16px 50%;
 }
 
 .category-veiligheid {
-  background: #f1f6f3;
-  color: #527765;
+  --icon-bg: #3f8a72;
+  background: #3f8a72;
+  color: #fff;
+  border-radius: 20px 20px 10px 10px;
 }
 
 .category-groei {
-  background: #fff6dc;
-  color: #a36f13;
+  --icon-bg: #7ea47a;
+  background: #7ea47a;
+  color: #fff;
+  border-radius: 50%;
 }
 
 .category-betekenis {
-  background: #fff0eb;
-  color: #d56d55;
+  --icon-bg: #dfa32f;
+  background: #dfa32f;
+  color: #fff;
+  border-radius: 18px 50% 18px 50%;
 }
 
 .category-erkenning {
-  background: #f0effb;
-  color: #7365aa;
+  --icon-bg: #183e5c;
+  background: #183e5c;
+  color: #fff;
+  border-radius: 50% 50% 18px 18px;
 }
 
 .category-plezier {
-  background: #fff1d8;
-  color: #c97720;
+  --icon-bg: #ef755b;
+  background: #ef755b;
+  color: #fff;
+  border-radius: 50%;
 }
 
 .category-integriteit {
-  background: #f2eff9;
-  color: #7763a8;
+  --icon-bg: #2f8584;
+  background: #2f8584;
+  color: #fff;
+  border-radius: 46% 54% 48% 52%;
 }
 
 .category-kracht {
-  background: #edf8f4;
-  color: #1d7c73;
+  --icon-bg: #143a57;
+  background: #143a57;
+  color: #fff;
+  border-radius: 14px;
 }
 
 .choice:hover,

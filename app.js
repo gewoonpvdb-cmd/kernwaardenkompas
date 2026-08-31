@@ -281,52 +281,104 @@ function iconCompass() {
     </svg>`;
 }
 
-function valueIcon(category) {
+function valueIcon(category, variant = 0) {
   const icons = {
     verbinding: `
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M17 22a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM31 22a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="2.4"/>
-        <path d="M8 38c1.5-7 6.2-11 12-11 2.1 0 4 .5 5.6 1.5M40 38c-1.5-7-6.2-11-12-11-2.1 0-4 .5-5.6 1.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="14" cy="16" r="5" fill="currentColor"/>
+        <circle cx="34" cy="16" r="5" fill="currentColor"/>
+        <path d="M6.5 36c.8-7 4-11 9.5-11 3.3 0 5.8 1.4 8 4M41.5 36c-.8-7-4-11-9.5-11-3.3 0-5.8 1.4-8 4" stroke="currentColor" stroke-width="3.8" stroke-linecap="round"/>
+        <path d="M24 37s-7-4.3-7-9.4a3.8 3.8 0 0 1 7-2 3.8 3.8 0 0 1 7 2C31 32.7 24 37 24 37Z" fill="currentColor"/>
       </svg>`,
     autonomie: `
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M24 40V10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M24 25c-8 0-13-5-14-14 9 1 14 6 14 14ZM25 26c8 0 13-5 14-14-9 1-14 6-14 14Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M13 37c1-13 8-20 21-22" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="m28 8 10 6-8 9 1-7-7-1 4-7Z" fill="currentColor"/>
       </svg>`,
     veiligheid: `
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M24 7 38 12v11c0 9-5.7 15.2-14 18-8.3-2.8-14-9-14-18V12l14-5Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
-        <path d="m17 24 5 5 10-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m7 23 17-14 17 14" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 21v18h24V21" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M20 39V28h8v11" fill="currentColor"/>
       </svg>`,
     groei: `
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M10 36h28M14 32l8-8 6 5 10-13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M32 16h6v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 40V20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M23 25C14 25 10 20 9 11c9 1 14 5 14 14ZM25 21c8 0 13-4 14-12-9 1-14 5-14 12Z" fill="currentColor"/>
+        <path d="M13 40h22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
       </svg>`,
     betekenis: `
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M24 39s-14-8.7-14-19a7.5 7.5 0 0 1 14-3.8A7.5 7.5 0 0 1 38 20c0 10.3-14 19-14 19Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="m24 5 4.5 14.5L43 24l-14.5 4.5L24 43l-4.5-14.5L5 24l14.5-4.5L24 5Z" fill="currentColor"/>
+        <circle cx="24" cy="24" r="4" fill="var(--icon-bg, #d99a25)"/>
       </svg>`,
     erkenning: `
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M24 8 28.5 18l10.5 1-8 7.2 2.4 10.4L24 31.2l-9.4 5.4L17 26.2l-8-7.2 10.5-1L24 8Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <circle cx="24" cy="20" r="11" stroke="currentColor" stroke-width="4"/>
+        <path d="m18 29-4 13 10-5 10 5-4-13" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="m24 13 2.2 4.2 4.8.7-3.5 3.4.8 4.7-4.3-2.2-4.3 2.2.8-4.7-3.5-3.4 4.8-.7L24 13Z" fill="currentColor"/>
       </svg>`,
     plezier: `
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M24 40c8.8 0 16-7.2 16-16S32.8 8 24 8 8 15.2 8 24s7.2 16 16 16Z" stroke="currentColor" stroke-width="2.4"/>
-        <path d="M17 21h.1M31 21h.1M17 28c3.8 4 10.2 4 14 0" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="24" cy="11" r="5" fill="currentColor"/>
+        <path d="M24 18v13M24 21 10 14M24 21l14-7M24 30 15 41M24 30l9 11" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>`,
     integriteit: `
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M24 9v30M12 17h24M15 17l-7 13h14l-7-13ZM33 17l-7 13h14l-7-13Z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 8c-10 0-16 7-16 17 0 7 3 12 7 15M24 14c-7 0-11 4-11 11 0 6 2 10 6 14M24 20c-4 0-6 2-6 6 0 5 2 9 5 13M29 39c3-5 5-9 5-15 0-7-4-10-10-10M25 27c0 6 2 10 5 13M40 32c1-3 2-6 2-9 0-10-7-17-18-17" stroke="currentColor" stroke-width="3.1" stroke-linecap="round"/>
       </svg>`,
     kracht: `
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M27 7 12 27h11l-2 14 15-20H25l2-14Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M4 39 18 17l7 10 5-7 14 19H4Z" fill="currentColor"/>
+        <path d="m14 23 4-6 7 10 5-7 5 7-6-2-4 7-7-9-4 4" fill="var(--icon-bg, #143a57)"/>
       </svg>`,
   };
 
-  return icons[category] || icons.betekenis;
+  const alternatives = {
+    verbinding: [
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 39S9 30 9 19.5A8 8 0 0 1 24 15a8 8 0 0 1 15 4.5C39 30 24 39 24 39Z" fill="currentColor"/></svg>`,
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M7 11h27v19H20l-8 7v-7H7V11Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M19 18h20v15h-5v6l-7-6" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>`,
+    ],
+    autonomie: [
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="4"/><path d="m30 15-4 11-11 7 7-11 8-7Z" fill="currentColor"/></svg>`,
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M10 39V9h22v30M18 39V17h20v22" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="m27 28 8-5v10l-8-5Z" fill="currentColor"/></svg>`,
+    ],
+    veiligheid: [
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 6 39 12v11c0 10-6 16-15 19-9-3-15-9-15-19V12l15-6Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="m17 24 5 5 10-11" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="12" r="5" stroke="currentColor" stroke-width="4"/><path d="M24 17v24M12 25h24M12 25c1 10 5 16 12 16s11-6 12-16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>`,
+    ],
+    groei: [
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 12c7-3 13-2 16 2 3-4 9-5 16-2v27c-7-3-13-2-16 2-3-4-9-5-16-2V12Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M24 14v27" stroke="currentColor" stroke-width="3"/></svg>`,
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 38h9V29h9V20h9V10" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="m29 10h6v6" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    ],
+    betekenis: [
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="4"/><circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="4"/><circle cx="24" cy="24" r="3" fill="currentColor"/><path d="m32 16 9-8" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>`,
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M17 39h14M19 33h10M17 21c0-6 3-11 7-15 4 4 7 9 7 15 0 5-3 9-7 9s-7-4-7-9Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    ],
+    erkenning: [
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M15 8h18v8c0 7-4 12-9 12s-9-5-9-12V8Z" stroke="currentColor" stroke-width="4"/><path d="M15 12H8c0 8 3 12 10 12M33 12h7c0 8-3 12-10 12M24 28v7M16 41h16M20 35h8" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="4"/><path d="m15 24 6 6 12-13" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    ],
+    plezier: [
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="4"/><circle cx="18" cy="21" r="2" fill="currentColor"/><circle cx="30" cy="21" r="2" fill="currentColor"/><path d="M16 29c4 5 12 5 16 0" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>`,
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="8" fill="currentColor"/><path d="M24 5v7M24 36v7M5 24h7M36 24h7M10.5 10.5l5 5M32.5 32.5l5 5M37.5 10.5l-5 5M15.5 32.5l-5 5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>`,
+    ],
+    integriteit: [
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 8v32M10 15h28M14 15 7 29h14l-7-14ZM34 15l-7 14h14l-7-14Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 6 39 12v11c0 10-6 16-15 19-9-3-15-9-15-19V12l15-6Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="m17 24 5 5 10-11" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    ],
+    kracht: [
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="m27 5-15 22h11l-2 16 15-23H25l2-15Z" fill="currentColor"/></svg>`,
+      `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M12 42V8M14 10h22l-5 7 5 7H14" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 42h10" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>`,
+    ],
+  };
+
+  const variants = [icons[category] || icons.betekenis, ...(alternatives[category] || [])];
+  return variants[variant % variants.length];
+}
+
+function stableIconVariant(value) {
+  return [...value.word].reduce((total, character) => total + character.charCodeAt(0), 0) % 3;
 }
 
 function shell(content, showReset = true) {
@@ -549,11 +601,14 @@ function renderChoice() {
   );
 }
 
-function renderChoiceButton(value) {
+function renderChoiceButton(value, index) {
   const selected = state.selectedThisRound.includes(value.word);
+  const variant = state.currentOptions
+    .slice(0, index)
+    .filter((option) => option.category === value.category).length % 3;
   return `
     <button class="choice ${selected ? "selected" : ""}" data-action="choose" data-word="${value.word}" aria-pressed="${selected}">
-      <span class="value-illustration category-${value.category}">${valueIcon(value.category)}</span>
+      <span class="value-illustration category-${value.category}">${valueIcon(value.category, variant)}</span>
       <span class="choice-word">${value.word}</span>
       <span class="choice-desc">${value.desc}</span>
     </button>`;
@@ -581,7 +636,7 @@ function renderRankItem(value, index) {
   return `
     <li class="rank-item">
       <span class="rank-number">${index + 1}</span>
-      <span class="mini-illustration category-${value.category}">${valueIcon(value.category)}</span>
+      <span class="mini-illustration category-${value.category}">${valueIcon(value.category, stableIconVariant(value))}</span>
       <span class="rank-copy"><strong>${value.word}</strong><span>${value.desc}</span></span>
       <span class="move-actions">
         <button class="icon-button" data-action="rank-up" data-index="${index}" ${index === 0 ? "disabled" : ""} aria-label="${value.word} omhoog">↑</button>
@@ -640,7 +695,7 @@ function renderResultItem(value, index) {
   return `
     <div class="result-item">
       <span class="rank-number">${index + 1}</span>
-      <span class="mini-illustration category-${value.category}">${valueIcon(value.category)}</span>
+      <span class="mini-illustration category-${value.category}">${valueIcon(value.category, stableIconVariant(value))}</span>
       <span><strong>${value.word}</strong><span>${value.desc}</span></span>
     </div>`;
 }
