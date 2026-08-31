@@ -530,8 +530,8 @@ function renderChoice() {
         <div class="progress" style="--progress: ${progress}%"><span></span></div>
       </div>
       <div class="choice-head">
-        <h2>Welke waarden raken u?</h2>
-        <p class="body-text">${state.cycle === 1 ? "Kies een of meerdere kaarten die belangrijk voelen. U hoeft niet precies te weten waarom." : "Kies uit deze eerder gekozen kaarten opnieuw wat het meest klopt. Zo wordt de stapel kleiner."}</p>
+        <h2>Welke waarden zijn voor u belangrijk?</h2>
+        <p class="body-text">${state.cycle === 1 ? "Kies een of meerdere kaarten die jou aanspreken of belangrijk zijn." : "Kies uit deze eerder gekozen kaarten opnieuw wat het meest klopt. Zo wordt de stapel kleiner."}</p>
         <p class="choice-count">${state.selectedThisRound.length} gekozen op dit scherm</p>
       </div>
       <div class="choice-grid">
