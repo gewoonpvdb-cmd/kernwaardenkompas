@@ -436,7 +436,7 @@ function finishCycle() {
     return;
   }
 
-  if (chosen.length <= 3) {
+  if (chosen.length <= 4) {
     state.finalValues = chosen;
     buildProfile();
     state.screen = "rank";
@@ -505,7 +505,7 @@ function renderIntro() {
           <ol class="steps">
             <li><span>1</span><p>U bekijkt 100 kernwaarden, steeds negen kaarten tegelijk.</p></li>
             <li><span>2</span><p>Kies per scherm een of meer waarden die belangrijk voelen. Overslaan mag ook.</p></li>
-            <li><span>3</span><p>Uw gekozen kaarten komen opnieuw terug, net zolang tot er drie kernwaarden overblijven.</p></li>
+            <li><span>3</span><p>Uw gekozen kaarten komen opnieuw terug, net zolang tot er vier kernwaarden overblijven.</p></li>
           </ol>
           <p class="small-note">Er worden geen gegevens opgeslagen. De uitslag blijft op uw scherm, zodat u die mee kunt nemen naar het gesprek.</p>
         </aside>
@@ -544,7 +544,7 @@ function renderChoice() {
         </div>
         <button class="primary" data-action="submit-round">Verder</button>
       </div>
-      <p class="small-note">${state.cycle === 1 ? "Eerst komen alle kaarten langs. Daarna gaat u verder met alleen de kaarten die u zelf gekozen heeft." : `Deze ronde bestaat uit ${state.pool.length} gekozen kaarten. Het doel is om uiteindelijk op 3 uit te komen.`}</p>
+      <p class="small-note">${state.cycle === 1 ? "Eerst komen alle kaarten langs. Daarna gaat u verder met alleen de kaarten die u zelf gekozen heeft." : `Deze ronde bestaat uit ${state.pool.length} gekozen kaarten. Het doel is om uiteindelijk op 4 uit te komen.`}</p>
     </section>`,
   );
 }
@@ -563,7 +563,7 @@ function renderRank() {
   app.innerHTML = shell(
     `<section class="panel choice-panel">
       <div class="choice-head">
-        <h2>Zet uw drie kernwaarden op volgorde</h2>
+        <h2>Zet uw vier kernwaarden op volgorde</h2>
         <p class="body-text">Dit zijn de waarden die overblijven na het kiezen. Zet ze in de volgorde die voor u het meest klopt. Nummer 1 heeft het meeste gewicht.</p>
       </div>
       <ol class="rank-list">
@@ -615,7 +615,7 @@ function renderResult() {
         <p class="body-text">Neem deze uitslag mee naar het gesprek. Dit is geen oordeel en geen diagnose, maar een startpunt om samen verder te onderzoeken.</p>
       </div>
       <div class="result-card">
-        <h3>Uw drie kernwaarden</h3>
+        <h3>Uw vier kernwaarden</h3>
         ${state.finalValues.map(renderResultItem).join("")}
       </div>
       <div class="profile-card">
