@@ -497,7 +497,7 @@ function renderIntro() {
       <div class="intro-grid">
         <div class="shell">
           <h1>Wat is belangrijk voor u?</h1>
-          <p class="lead">Uw hulpverlener heeft u gevraagd dit kernwaardenkompas in te vullen. U krijgt eerst alle waarden te zien in groepjes van negen. Kies de kaarten die bij u passen. Daarna bekijkt u alleen uw gekozen kaarten opnieuw, totdat er drie kernwaarden overblijven.</p>
+          <p class="lead">Uw hulpverlener heeft u gevraagd dit kernwaardenkompas in te vullen. Kies steeds de kaarten die jou aanspreken en voor jou belangrijk zijn.</p>
           <button class="primary" data-action="start">Start het kompas</button>
         </div>
         <aside class="intro-card">
